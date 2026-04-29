@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dakshin Vihar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo" aria-label="Dakshin Vihar home">Welcome to Dakshin Vihar</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="mandala" aria-hidden="true">
+          <!-- Premium geometric mandala (inline SVG) -->
+          <svg viewBox="0 0 220 220" width="92" height="92" role="img" aria-label="Mandala symbol">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#c49a5a" />
+                <stop offset="1" stop-color="#2d1b10" />
+              </linearGradient>
+            </defs>
+            <circle cx="110" cy="110" r="90" fill="none" stroke="url(#g)" stroke-width="3" opacity="0.95" />
+            <circle cx="110" cy="110" r="70" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.85" />
+            <g fill="none" stroke="url(#g)" stroke-width="2" opacity="0.85">
+              <path d="M110 20 L126 55 L165 40 L150 78 L190 93 L150 108 L165 145 L126 130 L110 160 L94 130 L55 145 L70 108 L30 93 L70 78 L55 40 L94 55 Z" />
+              <path d="M110 40 C140 40 160 62 160 92 C160 125 138 150 110 150 C80 150 58 125 58 92 C58 62 78 40 110 40 Z" opacity="0.7" />
+              <path d="M110 65 L118 83 L137 83 L121 95 L128 114 L110 103 L92 114 L99 95 L83 83 L102 83 Z" opacity="0.75" />
+            </g>
+            <circle cx="110" cy="110" r="6" fill="#c49a5a" />
+          </svg>
+        </div>
+
+        <h1>Dakshin Vihar</h1>
+        <p class="tagline">A Taste of South Indian Soul</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#menu">Explore Menu</a>
+          <a class="btn btn-secondary" href="#rooms">Book a Room</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-grid">
+          <img
+            class="about-image"
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1100&q=80"
+            alt="Dakshin Vihar ambience"
+          />
+          <div class="about-text">
+            <h2>Hospitality, Crafted Like Tradition</h2>
+            <p>
+              Dakshin Vihar blends premium comfort with authentic South Indian flavours.
+              From aromatic dosa and filter coffee to serene rooms designed for deep rest,
+              every detail is curated for a soulful experience.
+            </p>
+            <p class="muted">
+              Enjoy freshly prepared favourites, and book your stay in just a few clicks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Menu Highlights</h2>
+          <p>Premium South Indian dishes. Loaded dynamically from the backend.</p>
+        </div>
+
+        <div class="carousel" aria-label="Menu carousel">
+          <button class="carousel-arrow" id="menuPrev" type="button" aria-label="Previous menu">&larr;</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="menuTrack"></div>
+          </div>
+          <button class="carousel-arrow" id="menuNext" type="button" aria-label="Next menu">&rarr;</button>
+        </div>
+
+        <div id="menuLoading" class="loading" role="status" aria-live="polite">Loading menu...</div>
+        <div id="menuError" class="error" role="alert" hidden></div>
+      </div>
+    </section>
+
+    <section id="rooms" class="section rooms-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Rooms</h2>
+          <p>Find your perfect stay. Book requests are sent to the backend.</p>
+        </div>
+
+        <div id="roomsGrid" class="rooms-grid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <h2>Contact</h2>
+            <p>Have a question or need assistance? Send us a message.</p>
+            <div class="contact-details">
+              <div><strong>Phone:</strong> +91 98765 43210</div>
+              <div><strong>Email:</strong> dakshinviharhotel@gmail.com </div>
+              <div><strong>Hours:</strong> 9:00 AM - 11:00 PM</div>
+            </div>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <label for="contactName">Name</label>
+            <input id="contactName" name="name" type="text" placeholder="Your name" required />
+
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" placeholder="How can we help?" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <div id="contactStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-title">Dakshin Vihar</div>
+          <div class="footer-text">A Taste of South Indian Soul</div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Address</div>
+          <div class="footer-text">Dakshin Vihar, Beach Road, Chennai, Tamil Nadu</div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Phone</div>
+          <div class="footer-text">+91 98765 43210</div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Email</div>
+          <div class="footer-text">hello@dakshinvihar.example</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking modal -->
+  <div id="bookingModal" class="modal hidden" aria-hidden="true" hidden>
+    <div class="modal-overlay" data-close="true"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title" id="bookingTitle">Book Room</div>
+          <div class="modal-subtitle" id="bookingSubtitle">Room type</div>
+        </div>
+        <button class="modal-close" type="button" data-close="true" aria-label="Close booking modal">&times;</button>
+      </div>
+
+      <form id="bookingForm" class="booking-form">
+        <input type="hidden" id="bookingRoomType" />
+
+        <label for="bookingName">Customer Name</label>
+        <input id="bookingName" type="text" required placeholder="Full name" />
+
+        <label for="bookingEmail">Email</label>
+        <input id="bookingEmail" type="email" required placeholder="you@example.com" />
+
+        <div class="booking-row">
+          <div class="booking-field">
+            <label for="bookingCheckIn">Check-in</label>
+            <input id="bookingCheckIn" type="date" required />
+          </div>
+          <div class="booking-field">
+            <label for="bookingCheckOut">Check-out</label>
+            <input id="bookingCheckOut" type="date" required />
+          </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Confirm Booking</button>
+        <div id="bookingStatus" class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
