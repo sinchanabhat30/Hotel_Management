@@ -113,6 +113,10 @@ async function loadMenu() {
   const loading = $("menuLoading");
   const errorBox = $("menuError");
   const track = $("menuTrack");
+
+  // Prevent multiple loads
+  if (track.dataset.loaded === "true") return;
+
   track.innerHTML = "";
 
   try {
@@ -128,6 +132,7 @@ async function loadMenu() {
       track.appendChild(createMenuCard(item));
     }
 
+    track.dataset.loaded = "true";
     loading.hidden = true;
     setupMenuCarousel();
   } catch (err) {
