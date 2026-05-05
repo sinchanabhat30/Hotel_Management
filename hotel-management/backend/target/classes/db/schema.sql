@@ -31,3 +31,14 @@ CREATE TABLE IF NOT EXISTS contacts (
   message TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS party_hall_bookings (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  full_name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone_number VARCHAR(20) NOT NULL,
+  event_type VARCHAR(50) NOT NULL,
+  event_date DATE NOT NULL,
+  time_slot VARCHAR(20) NOT NULL,
+  number_of_guests INT NOT NULL
+);
+

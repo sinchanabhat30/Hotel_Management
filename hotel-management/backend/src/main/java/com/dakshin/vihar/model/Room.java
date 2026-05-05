@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 import java.math.BigDecimal;
 
@@ -24,6 +25,12 @@ public class Room {
 
     @Column(name = "image_url")
     private String imageUrl;
+
+    @Transient
+    private String status;
+
+    @Transient
+    private int availableCount;
 
     public Room() {}
 
@@ -59,6 +66,22 @@ public class Room {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getAvailableCount() {
+        return availableCount;
+    }
+
+    public void setAvailableCount(int availableCount) {
+        this.availableCount = availableCount;
     }
 }
 

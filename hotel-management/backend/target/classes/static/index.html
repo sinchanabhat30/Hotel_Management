@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dakshin Vihar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M24 6C26.5 12 30 14 34 15C30 16 27 20 24 24C21 20 18 16 14 15C18 14 21.5 12 24 6Z" fill="currentColor" opacity="0.18"/>
+          <path d="M24 42C21.5 36 18 34 14 33C18 32 21 28 24 24C27 28 30 32 34 33C30 34 26.5 36 24 42Z" fill="currentColor" opacity="0.18"/>
+          <path d="M6 24C12 26.5 14 30 15 34C16 30 20 27 24 24C20 21 16 18 15 14C14 18 12 21.5 6 24Z" fill="currentColor" opacity="0.18"/>
+          <path d="M42 24C36 21.5 34 18 33 14C32 18 28 21 24 24C28 27 32 30 33 34C34 30 36 26.5 42 24Z" fill="currentColor" opacity="0.18"/>
+          <circle cx="24" cy="24" r="6" fill="currentColor"/>
+        </svg>
+        Dakshin Vihar
+      </div>
+      <nav class="navbar-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">Services</a>
+          <div class="dropdown-menu">
+            <a href="/rooms">Rooms</a>
+            <a href="/party-hall">Party Hall</a>
+          </div>
+        </div>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-slider">
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551782450-17144efb5723?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551218377-a0d05627c4e7?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=80');"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to <em>Dakshin Vihar</em></h1>
+        <p class="hero-subtitle">A taste of south indian soul</p>
+        <div class="hero-cta">
+          <a href="#menu" class="btn btn-primary">Explore Menu</a>
+          <a href="#contact" class="btn btn-secondary">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <!-- Hero About Section -->
+      <div class="about-hero">
+        <div class="about-hero-content">
+          <h1 class="about-hero-title">South Indian Soul, Modern Bite.</h1>
+        </div>
+        <div class="about-hero-pattern"></div>
+      </div>
+
+      <!-- About Content Section -->
+      <div class="container">
+        <div class="about-content-grid">
+          <div class="about-quote">
+            <h2>Our Cafe is our <span class="highlight-orange">Temple</span>,<br>
+            Our Customers are <span class="highlight-orange">Gods</span>,<br>
+            & What we serve, is <span class="highlight-orange">Prasadam</span></h2>
+          </div>
+          <div class="about-description">
+            <p>Dakshin Vihar, a premium South Indian dining destination, serves authentic cuisine that's fresh, hot, and true to tradition. From early risers to night owls, we're here round the clock with food that feels like home – made with care, hygiene, and heart.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Menu Highlights</h2>
+          <p>Premium South Indian dishes.</p>
+        </div>
+
+        <div class="carousel" aria-label="Menu carousel">
+          <button class="carousel-arrow" id="menuPrev" type="button" aria-label="Previous menu">&larr;</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="menuTrack"></div>
+          </div>
+          <button class="carousel-arrow" id="menuNext" type="button" aria-label="Next menu">&rarr;</button>
+        </div>
+
+        <div id="menuLoading" class="loading" role="status" aria-live="polite">Loading menu...</div>
+        <div id="menuError" class="error" role="alert" hidden></div>
+      </div>
+    </section>
+
+    <section id="rooms" class="section rooms-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Rooms</h2>
+          <p>Find your perfect stay. Book requests are sent to the backend.</p>
+        </div>
+
+        <div id="roomsGrid" class="rooms-grid"></div>
+      </div>
+    </section>
+
+    <section id="party-hall" class="section party-hall-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Party Hall</h2>
+          <p>Spacious and elegant party hall perfect for celebrations, events, and gatherings.</p>
+        </div>
+
+        <div class="party-hall-content">
+          <div class="party-hall-image">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80" alt="Party Hall" />
+          </div>
+          <div class="party-hall-info">
+            <p>Host unforgettable events in our beautifully designed party hall, equipped with modern amenities and elegant decor perfect for weddings, birthdays, corporate events, and family gatherings.</p>
+            <a href="/party-hall" class="btn btn-primary">Book Party Hall</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Unfiltered Reviews, Unforgettable Experiences</h2>
+          <p>Read More Reviews & Share Your Story: Discover Our Testimonial Hub</p>
+        </div>
+
+        <div class="reviews-slider">
+          <div class="reviews-track">
+            <!-- Review Card 1 -->
+            <div class="review-card">
+              <div class="review-rating">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+              <p class="review-text">"An absolute gem! The dosa was crispy, the sambar was flavorful, and the service was impeccable. Dakshin Vihar has become our go-to spot for authentic South Indian cuisine."</p>
+              <div class="review-author">- Priya Sharma</div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="review-card">
+              <div class="review-rating">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+              <p class="review-text">"The party hall exceeded our expectations! Perfect for our family celebration. The staff was attentive, the food was delicious, and the ambiance was just right."</p>
+              <div class="review-author">- Rajesh Kumar</div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="review-card">
+              <div class="review-rating">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+              <p class="review-text">"Stayed in their premium room for a weekend getaway. The room was spotless, the bed was comfortable, and the complimentary breakfast was amazing. Highly recommended!"</p>
+              <div class="review-author">- Meera Patel</div>
+            </div>
+
+            <!-- Review Card 4 -->
+            <div class="review-card">
+              <div class="review-rating">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+              <p class="review-text">"The filter coffee here is to die for! Authentic taste that reminds me of my grandmother's kitchen. The idli and vada were equally impressive."</p>
+              <div class="review-author">- Arjun Nair</div>
+            </div>
+
+            <!-- Review Card 5 -->
+            <div class="review-card">
+              <div class="review-rating">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+              <p class="review-text">"Celebrated my birthday here and it was magical! The decorations, the food, the service - everything was perfect. Thank you Dakshin Vihar team!"</p>
+              <div class="review-author">- Kavita Singh</div>
+            </div>
+
+            <!-- Duplicate cards for seamless scrolling -->
+            <div class="review-card">
+              <div class="review-rating">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+              <p class="review-text">"An absolute gem! The dosa was crispy, the sambar was flavorful, and the service was impeccable. Dakshin Vihar has become our go-to spot for authentic South Indian cuisine."</p>
+              <div class="review-author">- Priya Sharma</div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-rating">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+              <p class="review-text">"The party hall exceeded our expectations! Perfect for our family celebration. The staff was attentive, the food was delicious, and the ambiance was just right."</p>
+              <div class="review-author">- Rajesh Kumar</div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-rating">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+              <p class="review-text">"Stayed in their premium room for a weekend getaway. The room was spotless, the bed was comfortable, and the complimentary breakfast was amazing. Highly recommended!"</p>
+              <div class="review-author">- Meera Patel</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <h2>Contact</h2>
+            <p>Have a question or need assistance? Send us a message.</p>
+            <div class="contact-details">
+              <div><strong>Phone:</strong> +91 98765 43210</div>
+              <div><strong>Email:</strong> dakshinvihar123@gmail.com </div>
+              <div><strong>Hours:</strong> 9:00 AM - 11:00 PM</div>
+            </div>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <label for="contactName">Name</label>
+            <input id="contactName" name="name" type="text" placeholder="Your name" required />
+
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" placeholder="How can we help?" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <div id="contactStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-title">Dakshin Vihar</div>
+          <div class="footer-text">A Taste of South Indian Soul</div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Address</div>
+          <div class="footer-text">Dakshin Vihar, Beach Road, Chennai, Tamil Nadu</div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Phone</div>
+          <div class="footer-text">+91 98765 43210</div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Email</div>
+          <div class="footer-text">dakshinvihar123@gmail.com</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking modal -->
+  <div id="bookingModal" class="modal hidden" aria-hidden="true" hidden>
+    <div class="modal-overlay" data-close="true"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title" id="bookingTitle">Book Room</div>
+          <div class="modal-subtitle" id="bookingSubtitle">Room type</div>
+        </div>
+        <button class="modal-close" type="button" data-close="true" aria-label="Close booking modal">&times;</button>
+      </div>
+
+      <form id="bookingForm" class="booking-form">
+        <input type="hidden" id="bookingRoomType" />
+
+        <label for="bookingName">Customer Name</label>
+        <input id="bookingName" type="text" required placeholder="Full name" />
+
+        <label for="bookingEmail">Email</label>
+        <input id="bookingEmail" type="email" required placeholder="you@example.com" />
+
+        <div class="booking-row">
+          <div class="booking-field">
+            <label for="bookingCheckIn">Check-in</label>
+            <input id="bookingCheckIn" type="date" required />
+          </div>
+          <div class="booking-field">
+            <label for="bookingCheckOut">Check-out</label>
+            <input id="bookingCheckOut" type="date" required />
+          </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Confirm Booking</button>
+        <div id="bookingStatus" class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="chat-wrapper">
+    <button id="chatToggle" class="chat-toggle" aria-label="Open help chat">
+      <span>Help?</span>
+    </button>
+
+    <section id="chatWindow" class="chat-window hidden" aria-hidden="true" role="dialog" aria-label="AI Assistant Chat">
+      <div class="chat-header">
+        <div>
+          <div class="chat-title">Dakshin Vihar Assistant</div>
+          <div class="chat-subtitle">Ask about rooms, menu, booking, or contact details.</div>
+        </div>
+        <button id="chatClose" class="chat-close" type="button" aria-label="Close chat window">&times;</button>
+      </div>
+      <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" placeholder="Ask anything about your stay..." autocomplete="off" required />
+        <button class="btn btn-primary chat-send" type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

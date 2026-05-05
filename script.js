@@ -168,6 +168,8 @@ function openBookingModal(room) {
   status.textContent = "";
 
   modal.classList.add("show");
+  modal.removeAttribute("hidden");
+  modal.hidden = false;
   modal.setAttribute("aria-hidden", "false");
 }
 
@@ -175,6 +177,7 @@ function closeBookingModal() {
   const modal = $("bookingModal");
   modal.classList.remove("show");
   modal.setAttribute("aria-hidden", "true");
+  modal.hidden = true;
 }
 
 async function createBooking(payload) {
@@ -219,6 +222,7 @@ function setupBookingModalHandlers() {
 
       await createBooking(payload);
       status.textContent = "Booking confirmed! We will contact you shortly.";
+      await loadRooms();
       setTimeout(() => closeBookingModal(), 900);
     } catch (err) {
       console.error(err);
@@ -233,20 +237,26 @@ function createRoomCard(room) {
   const img = escapeHtml(room.imageUrl);
   const type = escapeHtml(room.type);
   const price = formatMoney(room.price);
+  const availableCount = room.availableCount ?? 0;
+  const status = availableCount > 0 ? `Available (${availableCount} rooms left)` : "Rooms are fully booked";
+  const isBooked = availableCount <= 0;
 
   el.innerHTML = `
     <img src="${img}" alt="${type}" loading="lazy" />
     <div class="room-card-body">
       <div class="room-type">${type}</div>
       <div class="room-price">${price}</div>
+      <div class="room-status ${isBooked ? "booked" : "available"}">${status}</div>
       <div class="room-actions">
-        <button class="btn btn-primary" type="button">Book</button>
+        <button class="btn btn-primary" type="button" ${isBooked ? "disabled" : ""}>${isBooked ? "Fully Booked" : "Book"}</button>
       </div>
     </div>
   `;
 
   const btn = el.querySelector("button");
-  btn.addEventListener("click", () => openBookingModal(room));
+  if (!isBooked) {
+    btn.addEventListener("click", () => openBookingModal(room));
+  }
   return el;
 }
 
@@ -265,6 +275,11 @@ async function loadRooms() {
     if (!typeKey || seenTypes.has(typeKey)) continue;
     seenTypes.add(typeKey);
     uniqueRooms.push(room);
+  }
+
+  if (uniqueRooms.length === 0) {
+    grid.innerHTML = `<div class="error">No rooms are available right now. Please try again later.</div>`;
+    return;
   }
 
   for (const room of uniqueRooms) {
